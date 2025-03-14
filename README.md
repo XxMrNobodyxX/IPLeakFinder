@@ -4,7 +4,7 @@ A Python-based security tool designed to detect internal IP address disclosure v
 
 ## Description
 
-The Internal IP Disclosure Scanner checks for scenarios where applications might inadvertently reveal internal network information through HTTP 302 redirects. This can be a security concern as it might expose internal network architecture to potential attackers.
+The Internal IP Disclosure Scanner checks for scenarios where applications might leak internal network information through HTTP 302 redirects. This can be a security concern as it might expose internal network architecture to potential attackers.
 
 ## Features
 
@@ -13,6 +13,8 @@ The Internal IP Disclosure Scanner checks for scenarios where applications might
 - Custom HTTP headers to bypass common restrictions
 - Timeout controls to handle unresponsive targets
 - Detailed output showing vulnerable and non-vulnerable targets
+
+![image](https://github.com/user-attachments/assets/973cf8bb-38a3-4918-a125-c9083da7d1d0)
 
 ## Prerequisites
 
@@ -75,21 +77,3 @@ target.com ---- Vulnerable: Internal Location: http://internal-ip/path
 ```
 target.com ---- Not Vulnerable
 ```
-
-Note: The output is color-coded in terminal environments that support ANSI color codes:
-- Vulnerable targets are highlighted in bright green
-- Non-vulnerable targets are highlighted in bright red
-
-## Security Considerations
-
-- The tool disables SSL verification by default for testing purposes
-- It's recommended to use this tool only in authorized testing environments
-- Be cautious when testing against production systems
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Disclaimer
-
-This tool is for educational and authorized testing purposes only. Users are responsible for obtaining proper authorization before testing any systems they don't own or have explicit permission to test. 
