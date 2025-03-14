@@ -4,7 +4,7 @@ A Python-based security tool designed to detect internal IP address disclosure v
 
 ## Description
 
-The Internal IP Disclosure Scanner checks for scenarios where applications might leak internal network information through HTTP 302 redirects. This can be a security concern as it might expose internal network architecture to potential attackers.
+The Internal IP Disclosure Scanner checks for scenarios where applications might leak internal network information through HTTP 302 redirects. This can be a security concern as it might expose internal network architecture to potential attackers. When an HTTP/1.0 request without a Host header is sent to a misconfigured web server, some servers, particularly older versions of Microsoft IIS, may leak their internal IP address in the response headers, potentially exposing internal network information.
 
 ## Features
 
