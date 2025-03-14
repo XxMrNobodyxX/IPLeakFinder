@@ -9,10 +9,9 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from http.client import HTTPConnection
 HTTPConnection._http_vsn_str = 'HTTP/1.0'    #Force send HTTP/1.0
 
-# ANSI color codes
-GREEN = '\033[92m'  # Bright green
-RED = '\033[91m'    # Bright red
-RESET = '\033[0m'   # Reset color
+GREEN = '\033[92m'
+RED = '\033[91m'
+RESET = '\033[0m'
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Internal IP Disclosure Scanner')
@@ -23,7 +22,6 @@ def parse_args():
 def main():
     args = parse_args()
     
-    # Setup proxies if provided
     proxies = None
     if args.proxy:
         proxies = {
